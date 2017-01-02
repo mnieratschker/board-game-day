@@ -5,14 +5,22 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
+import { AngularFireModule } from 'angularfire2';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AngularFireModule.initializeApp({
+      apiKey: 'AIzaSyAamZhKbLsdtf2MNKJ8mgD1cVKr69Y0ygE',
+      authDomain: 'board-game-day.firebaseapp.com',
+      databaseURL: 'https://board-game-day.firebaseio.com',
+      storageBucket: ''
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
