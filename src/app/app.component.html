@@ -9,7 +9,7 @@
   </button>
   <span class="example-spacer"></span>
   <span *ngIf="loggedIn">{{name}}</span>
-  <button md-icon-button [mdMenuTriggerFor]="menu">
+  <button *ngIf="loggedIn" md-icon-button [mdMenuTriggerFor]="menu">
     <md-icon>more_vert</md-icon>
   </button>
   <md-menu #menu="mdMenu">
