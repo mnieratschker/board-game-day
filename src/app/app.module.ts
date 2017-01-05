@@ -9,6 +9,7 @@ import { routerModule } from './app.routing';
 
 import { AngularFireModule, AuthMethods, AuthProviders } from 'angularfire2';
 import { LoginComponent } from './login/login.component';
+import { DatesComponent } from './dates/dates.component';
 
 const myFirebaseAuthConfig = {
   provider: AuthProviders.Google,
@@ -25,6 +26,7 @@ const myFirebaseConfig = {
   declarations: [
     AppComponent,
     LoginComponent,
+    DatesComponent,
   ],
   imports: [
     BrowserModule,

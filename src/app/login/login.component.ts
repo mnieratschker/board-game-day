@@ -16,11 +16,9 @@ export class LoginComponent implements OnInit {
   constructor(private _angularFire: AngularFire) { }
 
   ngOnInit() {
-    this._angularFire.auth.subscribe(auth => this.uid = auth.auth.displayName);
   }
 
   loginWithGoogle() {
-    this._angularFire.auth.login()
-      .then(auth => this.uid = auth.auth.displayName);
+    this._angularFire.auth.login();
   }
 }
